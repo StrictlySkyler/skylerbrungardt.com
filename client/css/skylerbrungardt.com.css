@@ -1316,7 +1316,7 @@ nav li a:hover+.description {
 .who-link .sideburn,
 .what-link .sideburn,
 .social-link .sideburn {
-	left: 5px;
+	margin-left: 5px;
 }
 
 .neck {
