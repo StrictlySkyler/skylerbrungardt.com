@@ -1,12 +1,12 @@
 (function(N) {
 	N.login = function(user, trackerCookie) {
-		var contentAreas = document.querySelectorAll('.editable')
-			, i
-			, k
-			, len
-			, lon
-			, loginMeta = document.querySelectorAll('.login')[0]
-			, logoutLink;
+		var contentAreas = document.querySelectorAll('.editable'),
+			i,
+			k,
+			len,
+			lon,
+			loginMeta = document.querySelectorAll('.login')[0],
+			logoutLink;
 			
 		document.cookie = 'user=|' + user + '|user;'
 		document.cookie = 'tracker=|' + trackerCookie + '|tracker;'

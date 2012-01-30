@@ -1,22 +1,22 @@
 (function(N) {
 	
 	N.editThis = function() {
-		var self = this
-			, parent = self.parentNode
-			, name = parent.id
-			, i
-			, len
-			, sure
-			, form = document.createElement('form')
-			, content = []
-			, addNewPostButton = parent.parentNode.children[0]
-			, currentTitle = parent.querySelectorAll('.title')[0]
-			, currentBody = parent.querySelectorAll('.body')[0]
-			, newTitle
-			, newBody
-			, closeButton
-			//, optionsButton
-			, updateButton;
+		var self = this,
+			parent = self.parentNode,
+			name = parent.id,
+			i,
+			len,
+			sure,
+			form = document.createElement('form'),
+			content = [],
+			addNewPostButton = parent.parentNode.children[0],
+			currentTitle = parent.querySelectorAll('.title')[0],
+			currentBody = parent.querySelectorAll('.body')[0],
+			newTitle,
+			newBody,
+			closeButton,
+			//optionsButton,
+			updateButton;
 			
 		if (parent === parent.parentNode.children[1]) {
 			N.removeElement(addNewPostButton);

@@ -283,7 +283,7 @@ handle["/get-content"] = function(request, response, requestPath) {
 			
 			console.log('POST received.  Attempting to load data.');
 			
-			load(postData, request, response);
+			load(postData, response);
 		}
 		
 	})

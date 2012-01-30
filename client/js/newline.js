@@ -8,11 +8,11 @@ var Newline = {};
 	N.validCreds;
 	N.mainNav = document.getElementById('main-nav').children[0];
 	
-	var firstScript = document.getElementsByTagName('script')[0];
-	var controlsPath = '/client/js/controls/';
-	var src;
-	var scriptElements = [];
-	var scriptNames = [
+	var firstScript = document.getElementsByTagName('script')[0],
+		controlsPath = '/client/js/controls/',
+		src,
+		scriptElements = [],
+		scriptNames = [
 		// Newline scripts
 		'remove-element.js',
 		'create-login-form.js',
@@ -49,6 +49,7 @@ var Newline = {};
 	
 	document.onreadystatechange = function() {
 		if (document.readyState === 'complete') {
+			
 			N.getContent();
 			
 			N.loginLink.onclick = N.createLoginForm;

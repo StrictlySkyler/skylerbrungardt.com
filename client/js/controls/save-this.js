@@ -2,18 +2,18 @@
   N.saveThis = function(event) {
 		event.preventDefault();
 		
-		var self = this
-			, kids = self.parentNode.querySelectorAll('.userinput')
-			, i
-			, len
-			, emptyNodes = N.checkForEmpty(kids)
-			, content = {}
-			, postContent = new XMLHttpRequest()
-			, contentArea = self.parentNode.parentNode.parentNode
-			, article
-			, title
-			, body
-			, details;
+		var self = this,
+			kids = self.parentNode.querySelectorAll('.userinput'),
+			i,
+			len,
+			emptyNodes = N.checkForEmpty(kids),
+			content = {},
+			postContent = new XMLHttpRequest(),
+			contentArea = self.parentNode.parentNode.parentNode,
+			article,
+			title,
+			body,
+			details;
 			
 		if (emptyNodes.length > 0) {
 			for (i = 0, len = emptyNodes.length; i < len; i++) {

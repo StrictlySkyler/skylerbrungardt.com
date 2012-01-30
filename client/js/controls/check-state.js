@@ -1,7 +1,7 @@
 (function(N) {
 	N.checkState = function() {
-		var hashCheck = /tracker=\|.+\|tracker/.test(document.cookie)
-			, username = /user=\|.+\|user/.test(document.cookie);
+		var hashCheck = /tracker=\|.+\|tracker/.test(document.cookie),
+			username = /user=\|.+\|user/.test(document.cookie);
 		
 		if (username && hashCheck) {
 			hashCheck = document.cookie.match(/tracker=\|.+\|tracker/)[0]

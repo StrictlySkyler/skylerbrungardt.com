@@ -3,8 +3,8 @@
 				
 		if (element) {
 			
-		var parent = element.parentNode
-			,	interval = window.setInterval(function() {
+		var parent = element.parentNode,
+			interval = window.setInterval(function() {
 				
 				if (window.getComputedStyle(element)
 						.getPropertyValue('opacity') === '0') {

@@ -2,17 +2,17 @@
 	N.createPostForm = function(event) {
 		event.preventDefault();
 		
-		var self = this
-			, closeButton
-			//, optionsButton
-			, saveButton
-			, name = self.parentNode.id
-			, inputs
-			, form
-			, i
-			, len
-			, newPost = document.createElement('article')
-			, mostRecentSibling;
+		var self = this,
+			closeButton,
+			//optionsButton,
+			saveButton,
+			name = self.parentNode.id,
+			inputs,
+			form,
+			i,
+			len,
+			newPost = document.createElement('article'),
+			mostRecentSibling;
 			
 		newPost.className = 'new-post animate-all hidden';
 		newPost.innerHTML = '<form id="add-' + name +'-post-form"' +

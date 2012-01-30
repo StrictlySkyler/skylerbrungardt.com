@@ -1,8 +1,8 @@
 (function(N) {
 	N.getCreds = function(username, password) {
-		var hash
-			, decrypted
-			, getHash = new XMLHttpRequest();
+		var hash,
+			decrypted,
+			getHash = new XMLHttpRequest();
 
 		getHash.open('POST', '/login', true);
 		getHash.setRequestHeader('Content-Type', 'text/plain');

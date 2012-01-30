@@ -2,19 +2,19 @@
 	N.closeThis = function(event) {
 		event.preventDefault();
 
-		var self = this
-			, parent = self.parentNode
-			, name = parent.id
-			, i
-			, len
-			, sure
-			, contentArea = self.parentNode.parentNode.parentNode
-			, article = self.parentNode.parentNode
-			, currentTitle = parent.parentNode.querySelectorAll('.title')[0]
-			, currentBody = parent.parentNode.querySelectorAll('.body')[0]
-			, newTitle
-			, newBody
-			, content = [];
+		var self = this,
+			parent = self.parentNode,
+			name = parent.id,
+			i,
+			len,
+			sure,
+			contentArea = self.parentNode.parentNode.parentNode,
+			article = self.parentNode.parentNode,
+			currentTitle = parent.parentNode.querySelectorAll('.title')[0],
+			currentBody = parent.parentNode.querySelectorAll('.body')[0],
+			newTitle,
+			newBody,
+			content = [];
 		
 		if (self.className.match('edit-controls')) {
 			

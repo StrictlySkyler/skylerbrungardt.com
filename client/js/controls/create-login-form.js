@@ -2,8 +2,8 @@
 	N.createLoginForm = function(event) {
 		event.preventDefault();
 
-		var loginForm
-			, closeButton;
+		var loginForm,
+			closeButton;
 
 		if (document.getElementById('login-form') === null) {
 			loginForm = document.createElement('form')

@@ -6,7 +6,7 @@
 		addPost.className = 'add-post button animate-all hidden';
 		addPost.title = 'Add a new blog post';
 		addPost.id = 'add-blog-post';
-		addPost.innerHTML = '&plus;';
+		addPost.innerHTML = '+';
 		addPost.onclick = N.createPostForm;
 		
 		window.setTimeout(function() {

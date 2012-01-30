@@ -2,14 +2,14 @@
 	N.logout = function(event) {
 		event.preventDefault();
 		
-		var contentAreas = document.querySelectorAll('.content')
-			, addPostButtons = document.querySelectorAll('.add-post')
-			, editPostButtons = document.querySelectorAll('.edit-post')
-			, loginMeta = document.querySelectorAll('.login')[0]
-			, openPosts = document.querySelectorAll('.new-post')
-			, loginLink
-			, i
-			, len;
+		var contentAreas = document.querySelectorAll('.content'),
+			addPostButtons = document.querySelectorAll('.add-post'),
+			editPostButtons = document.querySelectorAll('.edit-post'),
+			loginMeta = document.querySelectorAll('.login')[0],
+			openPosts = document.querySelectorAll('.new-post'),
+			loginLink,
+			i,
+			len;
 					
 		document.cookie = 'user=null;expires=Thu, 01-Jan-70 00:00:01 GMT';
 		document.cookie = 'tracker=null;expires=Thu, 01-Jan-70 00:00:01 GMT';

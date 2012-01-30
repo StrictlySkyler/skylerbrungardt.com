@@ -1,9 +1,9 @@
 (function(N) {
 	N.onNav = function(element, direction) {
 		
-		var onElement = false;
-		var x;
-		var y;
+		var onElement = false,
+			x,
+			y;
 		
 		var toon = document.getElementById('toon');
 		
