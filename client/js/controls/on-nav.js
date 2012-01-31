@@ -8,8 +8,15 @@
 		var toon = document.getElementById('toon');
 		
 		document.onmousemove = function(e) {
-			x = e.pageX;
-			y = e.pageY;
+			if (!e) {
+				e = window.event;
+				
+				x = e.clientX;
+				y = e.clientY;
+			} else {
+				x = e.pageX;
+				y = e.pageY;
+			}
 			
 			if ((x < element.offsetLeft) ||
 					(x > (element.offsetLeft + element.offsetWidth)) ||

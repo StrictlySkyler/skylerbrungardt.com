@@ -6,10 +6,16 @@
 		var parent = element.parentNode,
 			interval = window.setInterval(function() {
 				
-				if (window.getComputedStyle(element)
-						.getPropertyValue('opacity') === '0') {
-					if (window.getComputedStyle(element)
-							.getPropertyValue('height') === '0px') {
+				var opacity = window.getComputedStyle ?
+					window.getComputedStyle(element, null).getPropertyValue('opacity') :
+					element.currentStyle.opacity,
+					
+					height = window.getComputedStyle ?
+					window.getComputedStyle(element, null).getPropertyValue('height') :
+					element.currentStyle.height;
+				
+				if (opacity === '0') {
+					if (height === '0px') {
 						
 						parent.removeChild(element);
 						window.clearInterval(interval);

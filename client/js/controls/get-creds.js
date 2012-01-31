@@ -15,7 +15,7 @@
 
 				if (!invalid) {
 					try {
-						decrypted = Crypto.AES.decrypt(hash, password);
+						decrypted = sjcl.decrypt(password, hash);
 					} catch (e) {
 						decrypted = false;
 						console.log('Wrong password.');

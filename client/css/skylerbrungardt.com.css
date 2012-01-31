@@ -376,6 +376,40 @@ body {
 	width: 1024px;
 }
 
+#legacy {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #a50;
+	z-index: 99998;
+}
+
+#warning {
+	margin: 200px auto 0;
+	width: 300px;
+	padding: 25px;
+	background: #fff;
+}
+
+#warning a {
+	color: #900;
+	cursor: pointer;
+}
+
+#warning a:hover {
+	color: #f00;
+}
+
+#warning p {
+	font: normal 15px/20px 'Monaco', 'Lucida Console', 'monospace';
+	color: #f60;
+	margin: 0 0 10px 20px;
+	text-indent: -20px;
+}
+
 #container {
 	width: 924px;
 	margin: 0 auto;
@@ -567,6 +601,11 @@ h3 a:hover {
 	color: #f0c;
 }
 
+nav {
+	font: normal 20px/20px 'MunroSmallRegular';
+	padding: 170px 0 0 138px;
+}
+
 /*
  Accessory stylistic content properties are used to avoid rendering the content
  in the markup. This benefits both SEO purposes and should prevent screen
@@ -574,45 +613,6 @@ h3 a:hover {
  that any styles, including transitions, need to be added directly in the rules
  for each one, since pseudo-elements can't receive classes.
 */
-
-h3 a:before {
-	content: "[";
-	color: #f00;
-	position: absolute;
-	margin: 0 0 0 -15px;
-	padding: 0;
-	text-shadow: -1px 1px 1px #000;
-	opacity: 0;
-	-webkit-transition: opacity 0.5s;
-	-moz-transition: opacity 0.5s;
-	-ms-transition: opacity 0.5s;
-	-o-transition: opacity 0.5s;
-}
-
-h3 a:after {
-	content: "]";
-	color: #f00;
-	position: absolute;
-	margin: 0 0 0 1px;
-	padding: 0;
-	text-shadow: -1px 1px 1px #000;
-	opacity: 0;
-	-webkit-transition: opacity 0.5s;
-	-moz-transition: opacity 0.5s;
-	-ms-transition: opacity 0.5s;
-	-o-transition: opacity 0.5s;
-}
-
-h3 a:hover:before,
-h3 a:hover:after {
-	opacity: 1;
-}
-
-nav {
-	font: normal 20px/20px 'MunroSmallRegular';
-	padding: 170px 0 0 138px;
-}
-
 nav ul:after {
 	content: "{";
 	font: normal 76px/76px 'Times New Roman';
@@ -687,6 +687,10 @@ nav li a:before {
 	-o-transition: opacity 0.5s;
 }
 
+.ie8 nav li a:before {
+	display: none;
+}
+
 nav li a:after {
 	content: "]";
 	color: #f00;
@@ -702,11 +706,22 @@ nav li a:after {
 	-o-transition: opacity 0.5s;
 }
 
+.ie8 nav li a:after {
+	display: none;
+}
+
 nav li a:hover:before,
 nav li a:hover:after,
 nav li a:focus:before,
 nav li a:focus:after {
 	opacity: 1;
+}
+
+.ie8 nav li a:hover:before,
+.ie8 nav li a:hover:after,
+.ie8 nav li a:focus:before,
+.ie8 nav li a:focus:after {
+	display: inline-block;
 }
 
 .description {
@@ -720,18 +735,34 @@ nav li a:focus:after {
 	text-shadow: -1px 1px 1px #000;
 }
 
+.ie8 .description {
+	display: none;
+}
+
 .starter {
 	opacity: 1;
 	padding: 20px 50px 20px 0;
 	margin: -20px 0 0 225px;
 }
 
+.ie8 .starter {
+	display: inline-block;
+}
+
 nav ul:hover+.starter {
 	opacity: 0;
 }
 
+.ie8 ul:hover+.starter {
+	display: none;
+}
+
 nav li a:hover+.description {
 	opacity: 1;
+}
+
+.ie8 nav li a:hover+.description {
+	display: inline-block;
 }
 
 /*
@@ -765,13 +796,15 @@ nav li a:hover+.description {
 #container .hidden {
 	padding: 0;
 	height: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 	border: none;
 	box-shadow: none;
 	overflow: hidden;
 }
 
 .main {
-	margin: 30px 0 0 150px;
+	margin: 0 0 0 150px;
 	width: 700px;
 }
 
@@ -783,6 +816,7 @@ nav li a:hover+.description {
 	content: '★';
 	display: block;
 	margin: 0 0 0 320px;
+	padding: 0 0 30px;
 	text-shadow: none;
 	width: 60px;
 	text-align: center;
@@ -866,6 +900,10 @@ nav li a:hover+.description {
 	-o-transition: all 0.25s;
 }
 
+.ie8 .text-body a:before {
+	display: none;
+}
+
 .text-body a:after {
 	content: "}";
 	color: #f00;
@@ -878,11 +916,22 @@ nav li a:hover+.description {
 	-o-transition: all 0.25s;
 }
 
+.ie8 .text-body a:after {
+	display: none;
+}
+
 .text-body a:hover:before,
 .text-body a:hover:after,
 .text-body a:focus:before,
 .text-body a:focus:after {
 	opacity: 1;
+}
+
+.ie8 .text-body a:hover:before,
+.ie8 .text-body a:hover:after,
+.ie8 .text-body a:focus:before,
+.ie8 .text-body a:focus:after {
+	display: inline-block;
 }
 
 .details {
@@ -919,6 +968,10 @@ nav li a:hover+.description {
 	-o-transition: opacity 0.25s;
 }
 
+.ie8 .details a:before {
+	display: none;
+}
+
 .details a:after {
 	content: "]";
 	color: #f00;
@@ -934,11 +987,22 @@ nav li a:hover+.description {
 	-o-transition: opacity 0.25s;
 }
 
+.ie8 .details a:after {
+	display: none;
+}
+
 .details a:hover:before,
 .details a:hover:after,
 .details a:focus:before,
 .details a:focus:after {
 	opacity: 1;
+}
+
+.ie8 .details a:hover:before,
+.ie8 .details a:hover:after,
+.ie8 .details a:focus:before,
+.ie8 .details a:focus:after {
+	display: inline-block;
 }
 
 #login-form {
@@ -1131,59 +1195,6 @@ nav li a:hover+.description {
 	font: normal 15px/20px 'Monaco', 'Lucida Console', 'monospace';
 }
 
-.post-form textarea::-webkit-scrollbar {
-	opacity: 1;
-	display: block;
-}
-
-.post-form textarea::-webkit-scrollbar-button:start:decrement,
-.post-form textarea::-webkit-scrollbar-button:end:increment,
-.post-form textarea::-webkit-scrollbar-thumb {
-	display: block;
-	opacity: 1;
-	background: #c60;
-	border: 1px solid #fc0;
-	box-shadow:
-		1px -1px 1px #944100,
-		-1px 1px 1px #000;
-}
-
-.post-form textarea::-webkit-scrollbar-button:start:decrement {
-	background-image: url('../images/scroll-up-arrow.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.post-form textarea::-webkit-scrollbar-button:end:increment {
-	background-image: url('../images/scroll-down-arrow.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.post-form textarea::-webkit-scrollbar-thumb {
-	background-image:
-		url('../images/scroll-up-arrow.png'),
-		url('../images/scroll-down-arrow.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.post-form textarea::-webkit-scrollbar-track {
-	display: block;
-	opacity: 1;
-	border-right: 4px solid #944100;
-	border-left: 4px solid #944100;
-	background: #a50;
-	box-shadow:
-		inset 1px 0 1px #f90,
-		inset -1px 0 1px #720;
-}
-
-.post-form textarea::-webkit-scrollbar-track-piece {
-	display: block;
-	opacity: 1;
-}
-
 .new-post-controls,
 .edit-controls {
 	float: right;
@@ -1271,6 +1282,14 @@ nav li a:hover+.description {
 */
 .toon {
 	margin: -75px 0 0 50px;
+}
+
+#legacy + #container #toon {
+	z-index: 99999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 350px 0 0 270px;
 }
 
 .toon,
@@ -1452,7 +1471,8 @@ nav li a:hover+.description {
 
 .who-link .left-forearm1,
 .what-link .left-forearm1,
-.social-link .left-forearm1 {
+.social-link .left-forearm1,
+#legacy + #container .left-forearm1 {
 	margin-top: -10px;
 	margin-left: 10px;
 }
@@ -1473,7 +1493,8 @@ nav li a:hover+.description {
 	margin-left: 20px;
 }
 
-.what-link .left-forearm2 {
+.what-link .left-forearm2,
+#legacy + #container .left-forearm2 {
 	margin-top: -20px;
 	margin-left: 20px;
 }
@@ -1499,7 +1520,8 @@ nav li a:hover+.description {
 	margin-left: 30px;
 }
 
-.what-link .left-hand {
+.what-link .left-hand,
+#legacy + #container .left-hand {
 	margin-top: -30px;
 	margin-left: 30px;
 }
@@ -1666,79 +1688,10 @@ nav li a:hover+.description {
 */
 /*****
 III.	BEGIN NON-SEMANTIC HELPER CLASSES
-*****Please define your styles BEFORE this section!*****
-*****/
-/*****
-For image replacement 
-*****/
-.ir {
-	display: block;
-	text-indent: -999em;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	text-align: left;
-	direction: ltr;
-}
-
-/***** 
-Hide only visually, but have it available for screenreaders: 
-by Jon Neal. 
-http://www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden 
-*****/
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-/***** 
-Extends the .visuallyhidden class to allow the element to be 
-focusable when navigated to via the keyboard: 
-http://drupal.org/node/897638 
-*****/
-.visuallyhidden.focusable: active, .visuallyhidden.focusable: focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	width: auto;
-}
-
-/***** 
-Hide visually and from screenreaders, but maintain layout 
+Please define your styles BEFORE this section!
 *****/
 .invisible {
-	visibility: hidden;
-}
-
-/***** 
-The Magnificent Clearfix: Updated to prevent margin-collapsing on 
-child elements. 
-http://j.mp/bestclearfix 
-*****/
-.clearfix: before, .clearfix: after {
-	content: "\0020";
-	display: block;
-	height: 0;
-	overflow: hidden;
-}
-
-.clearfix: after {
-	clear: both;
-}
-
-/***** 
-Fix clearfix: 
-http://blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page 
-*****/
-.clearfix {
-	zoom: 1;
+	display: none;
 }
 /*****
 END NON-SEMANTIC HELPER CLASSES

@@ -1,7 +1,13 @@
 (function(N) {
 	N.closeThis = function(event) {
-		event.preventDefault();
-
+		if (!event) {
+			event = window.event;
+			event.returnValue = false;
+		} else {
+			event.preventDefault();
+		}
+			
+		
 		var self = this,
 			parent = self.parentNode,
 			name = parent.id,
@@ -16,7 +22,11 @@
 			newBody,
 			content = [];
 		
-		if (self.className.match('edit-controls')) {
+		if (self.parentNode.id === 'login-form') {
+			
+			N.removeElement(self.parentNode);
+			
+		} else if (self.className.match('edit-controls')) {
 			
 			newTitle = parent.querySelectorAll('.title')[0];
 			newBody = parent.querySelectorAll('.body')[0];

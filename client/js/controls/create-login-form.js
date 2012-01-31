@@ -1,7 +1,12 @@
 (function(N) {
 	N.createLoginForm = function(event) {
-		event.preventDefault();
-
+		if (!event) {
+			event = window.event;
+			event.returnValue = false;
+		} else {
+			event.preventDefault();
+		}
+		
 		var loginForm,
 			closeButton;
 
@@ -23,10 +28,12 @@
 				'title="Close Login Form">&times;</button>';
 
 			N.header.appendChild(loginForm);
-			closeButton = loginForm.querySelectorAll('.close-button');
-			closeButton[0].onclick = N.closeThis;
-			originalZ = window.getComputedStyle(loginForm)
-				.getPropertyValue('z-index');
+			closeButton = loginForm.querySelectorAll('.close-button')[0];
+			closeButton.onclick = N.closeThis;
+			
+			N.originalZ = window.getComputedStyle ?
+				window.getComputedStyle(loginForm, null).getPropertyValue('z-index') :
+				loginForm.currentStyle.zIndex;
 
 			loginForm.onsubmit = N.submitLogin;
 
