@@ -50,4 +50,4 @@
 		};
 		
 	};
-}(Newline));
+}(nooline));
