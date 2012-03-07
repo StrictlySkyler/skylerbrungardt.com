@@ -1,9 +1,25 @@
-var fs = require('fs');
+// This module is responsible for finding the crypto hash associated with a
+// username, and sending it back to the client, so the client can check to see
+// if the creds provided allow logging in. All it does, essentially, is serve up
+// the appropriate hash.
+//
+// It's possible to replace this with another authentication mechanism, should a
+// developer choose; right now the work is pushed off to the client.
 
-var hash;
-var creds;
+/*jslint node: true, white: true, maxerr: 50, indent: 2 */
+'use strict';
 
-var auth = function(request, response) {
+var fs = require('fs'),
+	debug = require('./logger.js').debug,
+	errlog = require('./logger.js').error,
+
+hash,
+creds,
+
+// Grab the username the client has sent to us, and search for the username.hash
+// file matching the username passed to us. Then, serve back the contents of
+// that file, which are a crypto hash containing the user's password.
+auth = function(request, response) {
 	
 	var postData = '';
 	
@@ -21,10 +37,10 @@ var auth = function(request, response) {
 		
 		fs.readFile('./shared/creds/' +
 							creds +
-							'.hash', encoding='utf8', function(error, data) {
+							'.hash', 'utf8', function(error, data) {
 		
 		if (error) {
-			console.log('Couldn\'t find a hash file for the user \'' +
+			debug(__filename, 'Couldn\'t find a hash file for the user \'' +
 									creds +
 									'\'.');
 			
