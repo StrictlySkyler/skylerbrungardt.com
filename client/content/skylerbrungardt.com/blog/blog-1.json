@@ -1,6 +1,7 @@
 {
 	"type" : "blog",
 	"name": "blog-1",
+	"published": true,
 	"categories" : "Tech",
 	"tags" : "node,tech",
 	"date" : "12/28/2011 at 12:00:00",

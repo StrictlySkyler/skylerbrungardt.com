@@ -1,6 +1,7 @@
 {
 	"type": "news",
 	"name": "news-1",
+	"published": true,
 	"date": "2/2/2012 at 1:15:31",
 	"author": "skyler",
 	"title": "Welcome to version 0.1.1!",

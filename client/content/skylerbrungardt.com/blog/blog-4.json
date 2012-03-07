@@ -1,6 +1,7 @@
 {
   "type" : "blog",
 	"name": "blog-4",
+	"published": true,
   "categories" : "Tech",
   "tags" : "hacking,node,tech",
   "date" : "1/5/2012 at 12:00:00",

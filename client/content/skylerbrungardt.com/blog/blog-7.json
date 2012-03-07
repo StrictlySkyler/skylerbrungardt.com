@@ -1,6 +1,7 @@
 {
 	"type": "blog",
 	"name": "blog-7",
+	"published": true,
 	"date": "2/2/2012 at 2:6:7",
 	"author": "skyler",
 	"title": "And it's public.",

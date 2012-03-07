@@ -1,6 +1,7 @@
 {
 	"type": "news",
 	"name": "news-2",
+	"published": true,
 	"date": "3/2/2012 at 15:30:53",
 	"author": "skyler",
 	"title": "Version 0.1.3",

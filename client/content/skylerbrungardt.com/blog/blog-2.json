@@ -1,6 +1,7 @@
 {
   "type" : "blog",
 	"name": "blog-2",
+	"published": true,
   "categories" : "Life",
   "tags" : "life,time,tinfoil-hat",
   "date" : "1/2/2012 at 12:00:00",
