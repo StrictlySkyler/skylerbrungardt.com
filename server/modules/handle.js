@@ -87,15 +87,17 @@ handle["/favicon.ico"] = function(response) {
 			response.end();
 		
 		} else {
+			try {
+				debug(__filename, 'Handling favicon.');
 			
-			debug(__filename, 'Handling favicon.');
-			
-			response.writeHead(200, {
-				"Content-Type" : "image/x-icon"
-			});
-			response.write(data);
-			response.end();
-			
+				response.writeHead(200, {
+					"Content-Type" : "image/x-icon"
+				});
+				response.write(data);
+				response.end();
+			} catch(e) {
+				errlog(__filename, e);
+			}
 		}
 	});
 	
