@@ -881,6 +881,23 @@ nav li a:hover+.description {
 	font-weight: normal;
 }
 
+.text-body blockquote {
+  color: #510;
+  margin: 20px 40px;
+  text-shadow: -1px 1px 0 #a50;
+}
+
+.text-body blockquote:before {
+  content: '\201c';
+  position: absolute;
+  color: #944100;
+  font-size: 52px;
+  margin: 10px 0 0 -35px;
+  text-shadow:
+    1px -1px 0 #720,
+    -1px 1px 0 #a50;
+}
+
 .text-body a {
 	-webkit-transition: all 0.25s;
 	-moz-transition: all 0.25s;
@@ -1129,7 +1146,6 @@ nav li a:hover+.description {
 	box-shadow: -1px 1px 1px #000;
 	color: #fc0;
 	position: absolute;
-	opacity: 0;
 	margin: -2px 0 0 600px;
 	z-index: 99999;
 }
