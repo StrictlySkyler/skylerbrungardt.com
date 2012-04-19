@@ -23,7 +23,7 @@ if (process.argv.length > 2) {
 // Start the server.
 start(portPassed);
 
-browser.visit('http://localhost', function(e, browser) {
+browser.visit('http://skylerbrungardt.com', function(e, browser) {
 	
 	fs.writeFile('index.html', browser.html(), function(error) {
 		
