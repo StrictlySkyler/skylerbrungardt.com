@@ -11,6 +11,8 @@ var start = require('./server/modules/server.js').start
 	, debug = require('./server/modules/logger.js').debug
 	, errlog = require('./server/modules/logger.js').error
 
+	, sites
+	, i
 	, portPassed;	// nooline defaults to port 8080 if no port is passed.
 
 // Catch the CLI flags.
@@ -23,18 +25,38 @@ if (process.argv.length > 2) {
 // Start the server.
 start(portPassed);
 
-browser.visit('http://skylerbrungardt.com', function(e, browser) {
-	
-	fs.writeFile('index.html', browser.html(), function(error) {
+fs.readdir('./client/seo', function(error, data) {
+	if (error) {
+		errlog(__filename, error);
+	} else {
 		
-		if (error) {
+		sites = data;
+		
+		for (i = 0, sites.length; i < sites.length; i++) {
 			
-			errlog(__filename, error);
+			var sitename = sites[i];
 			
-		} else {
-			
-			debug(__filename, 'HTML snapshot taken!');
-			
+			browser.visit('http://' +
+										sites[i], function(e, browser) {
+				
+				fs.writeFile('./client/cache/' +
+										 browser.window.location.host +
+										 '/index.html', browser.html(), function(error) {
+					
+					if (error) {
+						
+						errlog(__filename, error);
+						
+					} else {
+						
+						debug(__filename, 'HTML snapshot of ' +
+									browser.window.location.host +
+									' taken!');
+						
+					}
+				});
+			});
 		}
-	});
+		
+	}
 });

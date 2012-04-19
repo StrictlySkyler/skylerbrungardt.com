@@ -2620,3 +2620,42 @@
 [1;30m21:49:7.44ms 4/18/2012 router.js:[0m /login has been requested.
 [1;30m21:49:8.884ms 4/18/2012 router.js:[0m / has been requested.
 [1;30m21:49:8.884ms 4/18/2012 handle.js:[0m Serving ./client/templates/nooline.org.html.
+[1;30m12:28:37.648ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[1;30m12:29:21.868ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[1;30m12:29:22.110ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
+[1;30m12:30:13.805ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+nooline.org
+[1;30m12:30:14.27ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
+[1;30m12:30:49.343ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[ 'nooline.org' ]
+[1;30m12:30:49.589ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
+[1;30m12:32:49.242ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[ 'nooline.org', 'skylerbrungardt.com' ]
+[1;30m12:32:49.536ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:32:49.664ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:33:12.690ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[ 'nooline.org', 'skylerbrungardt.com' ]
+[1;30m12:33:12.982ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:33:13.28ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:34:35.417ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[ 'nooline.org', 'skylerbrungardt.com' ]
+{ _history: [Object], _url: [Object] }
+{ _history: [Object], _url: [Object] }
+[1;30m12:34:54.900ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+undefined
+undefined
+[1;30m12:35:13.566ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+undefined
+undefined
+[1;30m12:35:28.463ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+{ _history: [Object], _url: [Object] }
+{ _history: [Object], _url: [Object] }
+[1;30m12:35:41.989ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+skylerbrungardt.com
+nooline.org
+[1;30m12:36:31.637ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[1;30m12:36:31.893ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
+[1;30m12:36:31.968ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:44:20.523ms 4/19/2012 server.js:[0m Server started, and listening at port 80
+[1;30m12:44:20.885ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
+[1;30m12:44:20.886ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
