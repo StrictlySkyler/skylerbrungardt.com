@@ -1,0 +1,3 @@
+[1;31m21:48:51.104ms 4/18/2012 handle.js:[1;33m Error: ENOENT, open './client/templates/localhost.html'[0m
+[1;31m21:48:59.186ms 4/18/2012 handle.js:[1;33m Error: ENOENT, open './client/templates/localhost.html'[0m
+[1;31m21:48:59.833ms 4/18/2012 handle.js:[1;33m TypeError: Object #<IncomingMessage> has no method 'writeHead'[0m

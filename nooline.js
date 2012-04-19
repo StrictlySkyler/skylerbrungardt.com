@@ -6,6 +6,10 @@
 'use strict';
 
 var start = require('./server/modules/server.js').start
+	, browser = require('zombie')
+	, fs = require('fs')
+	, debug = require('./server/modules/logger.js').debug
+	, errlog = require('./server/modules/logger.js').error
 
 	, portPassed;	// nooline defaults to port 8080 if no port is passed.
 
@@ -18,3 +22,19 @@ if (process.argv.length > 2) {
 
 // Start the server.
 start(portPassed);
+
+browser.visit('http://localhost', function(e, browser) {
+	
+	fs.writeFile('index.html', browser.html(), function(error) {
+		
+		if (error) {
+			
+			errlog(__filename, error);
+			
+		} else {
+			
+			debug(__filename, 'HTML snapshot taken!');
+			
+		}
+	});
+});
