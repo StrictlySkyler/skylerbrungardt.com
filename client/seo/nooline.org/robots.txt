@@ -1,4 +1,4 @@
 User-agent: *
-Sitemap: http://skylerbrungardt.com/client/seo/skylerbrungardt.com/sitemap.xml
+Sitemap: http://nooline.org/client/seo/nooline.org/sitemap.xml
 Allow: /index.html
 Disallow: /
