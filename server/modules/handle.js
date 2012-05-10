@@ -20,6 +20,9 @@ var fs = require('fs'),
 	path = require('path'),
 	debug = require('./logger.js').debug,
 	errlog = require('./logger.js').error,
+	addUser = require('./users.js').add,
+	removeUser = require('./users.js').remove,
+	changePassword = require('./users.js').change,
 	i,
 	
 	// The "handle" object lets us dynamically define and export each handler we
@@ -261,6 +264,8 @@ handle.request = function(request, response, requestPath, redirect) {
 // If we have a login request, call the authentication module.
 handle["/login"] = function(request, response) {
 	
+	debug(__filename, 'Handling request for user login.');
+	
 	auth(request, response);
 	
 };
@@ -382,7 +387,7 @@ handle["/remove-content"] = function(request, response, requestPath) {
 		}
 		
 	});
-}
+};
 
 handle["/publish-content"] = function(request, response, requestPath) {
 	
@@ -408,7 +413,89 @@ handle["/publish-content"] = function(request, response, requestPath) {
 		}
 		
 	});
-}
+};
+
+handle["/add-user"] = function(request, response, requestPath) {
+	
+	postData = '';
+	
+	debug(__filename, 'Handling request to add a user.');
+	
+	request.setEncoding('utf8');
+	
+	request.addListener('data', function(chunk) {
+		
+		postData += chunk;
+		
+	});
+	
+	request.addListener('end', function() {
+		
+		if (postData !== '') {
+			
+			debug(__filename, 'POST received.  Attempting to add a new user.');
+			
+			addUser(postData, request, response);
+		}
+		
+	});
+	
+};
+
+handle["/remove-user"] = function(request, response, requestPath) {
+	
+	postData = '';
+	
+	debug(__filename, 'Handling request to remove a user.');
+	
+	request.setEncoding('utf8');
+	
+	request.addListener('data', function(chunk) {
+		
+		postData += chunk;
+		
+	});
+	
+	request.addListener('end', function() {
+		
+		if (postData !== '') {
+			
+			debug(__filename, 'POST received.  Attempting to remove a user.');
+			
+			removeUser(postData, request, response);
+			
+		}
+		
+	});
+};
+
+handle["/change-password"] = function(request, response, requestPath) {
+	
+	postData = '';
+	
+	debug(__filename, 'Handling request to change a user\'s password.');
+	
+	request.setEncoding('utf8');
+	
+	request.addListener('data', function(chunk) {
+		
+		postData += chunk;
+		
+	});
+	
+	request.addListener('end', function() {
+		
+		if (postData !== '') {
+			
+			debug(__filename, 'POST received.  Attempting to change passwords.');
+			
+			changePassword(postData, request, response);
+			
+		}
+		
+	})
+	
+};
 
 // Export all the methods in the handler.
 for (i in handle) {
