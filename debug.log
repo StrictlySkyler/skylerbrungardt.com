@@ -2659,3 +2659,833 @@ nooline.org
 [1;30m12:44:20.523ms 4/19/2012 server.js:[0m Server started, and listening at port 80
 [1;30m12:44:20.885ms 4/19/2012 nooline.js:[0m HTML snapshot of skylerbrungardt.com taken!
 [1;30m12:44:20.886ms 4/19/2012 nooline.js:[0m HTML snapshot of nooline.org taken!
+[1;30m18:27:41.357ms 5/10/2012 server.js:[0m 
+ Server started, and listening at port 80
+[1;30m18:27:42.898ms 5/10/2012 nooline.js:[0m 
+ HTML snapshot of nooline.org taken!
+[1;30m18:27:43.738ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:27:43.738ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/localhost.html.
+[1;30m18:27:44.217ms 5/10/2012 nooline.js:[0m 
+ HTML snapshot of skylerbrungardt.com taken!
+[1;30m18:27:44.728ms 5/10/2012 router.js:[0m 
+ /favicon.ico has been requested.
+[1;30m18:27:44.736ms 5/10/2012 handle.js:[0m 
+ Handling favicon.
+[1;30m18:28:10.546ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:28:10.547ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:28:10.757ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:28:10.757ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:28:11.163ms 5/10/2012 router.js:[0m 
+ /client/css/nooline.org.css has been requested.
+[1;30m18:28:11.163ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/nooline.org.css.
+[1;30m18:28:11.164ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:28:11.164ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:28:11.164ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:28:11.164ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:28:11.164ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:28:11.164ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:28:11.743ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:28:11.743ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:28:11.743ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:28:11.743ms 5/10/2012 load-content.js:[0m 
+ 1 "blurb" content items requested...
+[1;30m18:28:11.744ms 5/10/2012 load-content.js:[0m 
+ 1 "notes" content items requested...
+[1;30m18:28:11.744ms 5/10/2012 load-content.js:[0m 
+ 1 "news" content items requested...
+[1;30m18:28:11.744ms 5/10/2012 load-content.js:[0m 
+ 1 "about" content items requested...
+[1;30m18:28:11.744ms 5/10/2012 load-content.js:[0m 
+ 1 "docs" content items requested...
+[1;30m18:28:11.744ms 5/10/2012 load-content.js:[0m 
+ 5 types of content have been requested.
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ ...1 "blurb" content items total.
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "blurb" content items...
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blurb-1...
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ ...1 "notes" content items total.
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "notes" content items...
+[1;30m18:28:11.783ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: notes-1...
+[1;30m18:28:11.818ms 5/10/2012 load-content.js:[0m 
+ ...2 "news" content items total.
+[1;30m18:28:11.818ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "news" content items...
+[1;30m18:28:11.818ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: news-2...
+[1;30m18:28:11.818ms 5/10/2012 load-content.js:[0m 
+ ...1 "about" content items total.
+[1;30m18:28:11.819ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "about" content items...
+[1;30m18:28:11.819ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: about-1...
+[1;30m18:28:11.819ms 5/10/2012 load-content.js:[0m 
+ ...1 "docs" content items total.
+[1;30m18:28:11.819ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "docs" content items...
+[1;30m18:28:11.819ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: docs-1...
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...notes-1.json grabbed...
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...All "notes" content items have been grabbed.
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...news-2.json grabbed...
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...All "news" content items have been grabbed.
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...docs-1.json grabbed...
+[1;30m18:28:11.842ms 5/10/2012 load-content.js:[0m 
+ ...All "docs" content items have been grabbed.
+[1;30m18:28:11.864ms 5/10/2012 load-content.js:[0m 
+ ...blurb-1.json grabbed...
+[1;30m18:28:11.864ms 5/10/2012 load-content.js:[0m 
+ ...All "blurb" content items have been grabbed.
+[1;30m18:28:11.864ms 5/10/2012 load-content.js:[0m 
+ ...about-1.json grabbed...
+[1;30m18:28:11.865ms 5/10/2012 load-content.js:[0m 
+ ...All "about" content items have been grabbed.
+[1;30m18:28:11.865ms 5/10/2012 load-content.js:[0m 
+ All 5 content types have been grabbed!
+[1;30m18:28:11.865ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:28:12.994ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:28:12.994ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:28:13.341ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:28:13.341ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:28:13.342ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:28:13.342ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:28:13.343ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:28:13.343ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:28:13.343ms 5/10/2012 router.js:[0m 
+ /client/css/nooline.org.css has been requested.
+[1;30m18:28:13.343ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/nooline.org.css.
+[1;30m18:28:13.474ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:28:13.474ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:28:13.474ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:28:13.474ms 5/10/2012 load-content.js:[0m 
+ 1 "blurb" content items requested...
+[1;30m18:28:13.474ms 5/10/2012 load-content.js:[0m 
+ 1 "notes" content items requested...
+[1;30m18:28:13.474ms 5/10/2012 load-content.js:[0m 
+ 1 "news" content items requested...
+[1;30m18:28:13.475ms 5/10/2012 load-content.js:[0m 
+ 1 "about" content items requested...
+[1;30m18:28:13.475ms 5/10/2012 load-content.js:[0m 
+ 1 "docs" content items requested...
+[1;30m18:28:13.475ms 5/10/2012 load-content.js:[0m 
+ 5 types of content have been requested.
+[1;30m18:28:13.475ms 5/10/2012 load-content.js:[0m 
+ ...1 "blurb" content items total.
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "blurb" content items...
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blurb-1...
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ ...1 "notes" content items total.
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "notes" content items...
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: notes-1...
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ ...1 "about" content items total.
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "about" content items...
+[1;30m18:28:13.476ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: about-1...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...1 "docs" content items total.
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "docs" content items...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: docs-1...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...2 "news" content items total.
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "news" content items...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: news-2...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...blurb-1.json grabbed...
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...All "blurb" content items have been grabbed.
+[1;30m18:28:13.477ms 5/10/2012 load-content.js:[0m 
+ ...notes-1.json grabbed...
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...All "notes" content items have been grabbed.
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...about-1.json grabbed...
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...All "about" content items have been grabbed.
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...docs-1.json grabbed...
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...All "docs" content items have been grabbed.
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...news-2.json grabbed...
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ ...All "news" content items have been grabbed.
+[1;30m18:28:13.478ms 5/10/2012 load-content.js:[0m 
+ All 5 content types have been grabbed!
+[1;30m18:28:13.479ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:28:13.677ms 5/10/2012 router.js:[0m 
+ /client/images/nooline.org.ico has been requested.
+[1;30m18:28:13.677ms 5/10/2012 handle.js:[0m 
+ Serving /client/images/nooline.org.ico.
+[1;30m18:28:16.856ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:28:16.856ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/skylerbrungardt.com.html.
+[1;30m18:28:17.283ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:28:17.283ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:28:17.284ms 5/10/2012 router.js:[0m 
+ /client/js/custom/on-nav.js has been requested.
+[1;30m18:28:17.284ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/custom/on-nav.js.
+[1;30m18:28:17.284ms 5/10/2012 router.js:[0m 
+ /client/css/skylerbrungardt.com.css has been requested.
+[1;30m18:28:17.284ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/skylerbrungardt.com.css.
+[1;30m18:28:17.300ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:28:17.300ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:28:17.301ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:28:17.301ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:28:17.701ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro_small-webfont.woff has been requested.
+[1;30m18:28:17.701ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro_small-webfont.woff.
+[1;30m18:28:17.701ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro-webfont.woff has been requested.
+[1;30m18:28:17.701ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro-webfont.woff.
+[1;30m18:28:17.702ms 5/10/2012 router.js:[0m 
+ /client/fonts/joystix_monospace-webfont.woff has been requested.
+[1;30m18:28:17.702ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/joystix_monospace-webfont.woff.
+[1;30m18:28:17.783ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:28:17.783ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:28:17.784ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:28:17.785ms 5/10/2012 load-content.js:[0m 
+ 5 "blog" content items requested...
+[1;30m18:28:17.785ms 5/10/2012 load-content.js:[0m 
+ 1 "who" content items requested...
+[1;30m18:28:17.785ms 5/10/2012 load-content.js:[0m 
+ 1 "what" content items requested...
+[1;30m18:28:17.785ms 5/10/2012 load-content.js:[0m 
+ 1 "social" content items requested...
+[1;30m18:28:17.785ms 5/10/2012 load-content.js:[0m 
+ 4 types of content have been requested.
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ ...10 "blog" content items total.
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ Grabbing 5 most recent "blog" content items...
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-10...
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-9...
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-8...
+[1;30m18:28:17.786ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-7...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-6...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...1 "who" content items total.
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "who" content items...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: who-1...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...1 "what" content items total.
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "what" content items...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: what-1...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...1 "social" content items total.
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "social" content items...
+[1;30m18:28:17.787ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: social-1...
+[1;30m18:28:17.844ms 5/10/2012 load-content.js:[0m 
+ ...blog-8.json grabbed...
+[1;30m18:28:17.844ms 5/10/2012 load-content.js:[0m 
+ ...blog-10.json grabbed...
+[1;30m18:28:17.844ms 5/10/2012 load-content.js:[0m 
+ ...blog-6.json grabbed...
+[1;30m18:28:17.845ms 5/10/2012 load-content.js:[0m 
+ ...blog-7.json grabbed...
+[1;30m18:28:17.845ms 5/10/2012 load-content.js:[0m 
+ ...blog-9.json grabbed...
+[1;30m18:28:17.845ms 5/10/2012 load-content.js:[0m 
+ ...All "blog" content items have been grabbed.
+[1;30m18:28:17.859ms 5/10/2012 load-content.js:[0m 
+ ...what-1.json grabbed...
+[1;30m18:28:17.860ms 5/10/2012 load-content.js:[0m 
+ ...All "what" content items have been grabbed.
+[1;30m18:28:17.873ms 5/10/2012 load-content.js:[0m 
+ ...who-1.json grabbed...
+[1;30m18:28:17.874ms 5/10/2012 load-content.js:[0m 
+ ...All "who" content items have been grabbed.
+[1;30m18:28:17.874ms 5/10/2012 load-content.js:[0m 
+ ...social-1.json grabbed...
+[1;30m18:28:17.874ms 5/10/2012 load-content.js:[0m 
+ ...All "social" content items have been grabbed.
+[1;30m18:28:17.874ms 5/10/2012 load-content.js:[0m 
+ All 4 content types have been grabbed!
+[1;30m18:28:17.874ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:28:33.848ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:28:33.848ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/skylerbrungardt.com.html.
+[1;30m18:28:34.202ms 5/10/2012 router.js:[0m 
+ /client/js/custom/on-nav.js has been requested.
+[1;30m18:28:34.202ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/custom/on-nav.js.
+[1;30m18:28:34.203ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:28:34.203ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:28:34.203ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:28:34.203ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:28:34.204ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:28:34.204ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:28:34.204ms 5/10/2012 router.js:[0m 
+ /client/css/skylerbrungardt.com.css has been requested.
+[1;30m18:28:34.204ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/skylerbrungardt.com.css.
+[1;30m18:28:34.434ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro-webfont.woff has been requested.
+[1;30m18:28:34.434ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro-webfont.woff.
+[1;30m18:28:34.437ms 5/10/2012 router.js:[0m 
+ /client/fonts/joystix_monospace-webfont.woff has been requested.
+[1;30m18:28:34.437ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/joystix_monospace-webfont.woff.
+[1;30m18:28:34.437ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro_small-webfont.woff has been requested.
+[1;30m18:28:34.437ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro_small-webfont.woff.
+[1;30m18:28:34.512ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:28:34.512ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:28:34.516ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:28:34.516ms 5/10/2012 load-content.js:[0m 
+ 5 "blog" content items requested...
+[1;30m18:28:34.516ms 5/10/2012 load-content.js:[0m 
+ 1 "who" content items requested...
+[1;30m18:28:34.516ms 5/10/2012 load-content.js:[0m 
+ 1 "what" content items requested...
+[1;30m18:28:34.517ms 5/10/2012 load-content.js:[0m 
+ 1 "social" content items requested...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ 4 types of content have been requested.
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...10 "blog" content items total.
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ Grabbing 5 most recent "blog" content items...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-10...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-9...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-8...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-7...
+[1;30m18:28:34.522ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-6...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...1 "who" content items total.
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "who" content items...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: who-1...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...1 "what" content items total.
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "what" content items...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: what-1...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...1 "social" content items total.
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "social" content items...
+[1;30m18:28:34.523ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: social-1...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...blog-10.json grabbed...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...blog-9.json grabbed...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...blog-8.json grabbed...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...blog-7.json grabbed...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...blog-6.json grabbed...
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...All "blog" content items have been grabbed.
+[1;30m18:28:34.524ms 5/10/2012 load-content.js:[0m 
+ ...who-1.json grabbed...
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ ...All "who" content items have been grabbed.
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ ...what-1.json grabbed...
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ ...All "what" content items have been grabbed.
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ ...social-1.json grabbed...
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ ...All "social" content items have been grabbed.
+[1;30m18:28:34.525ms 5/10/2012 load-content.js:[0m 
+ All 4 content types have been grabbed!
+[1;30m18:28:34.527ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:28:34.793ms 5/10/2012 router.js:[0m 
+ /client/images/favicon.ico has been requested.
+[1;30m18:28:34.793ms 5/10/2012 handle.js:[0m 
+ Serving /client/images/favicon.ico.
+[1;30m18:29:8.167ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:29:8.168ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/skylerbrungardt.com.html.
+[1;30m18:29:8.536ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:29:8.536ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:29:8.540ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:29:8.540ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:29:8.542ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:29:8.542ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:29:8.543ms 5/10/2012 router.js:[0m 
+ /client/css/skylerbrungardt.com.css has been requested.
+[1;30m18:29:8.543ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/skylerbrungardt.com.css.
+[1;30m18:29:8.551ms 5/10/2012 router.js:[0m 
+ /client/js/custom/on-nav.js has been requested.
+[1;30m18:29:8.551ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/custom/on-nav.js.
+[1;30m18:29:8.719ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro_small-webfont.woff has been requested.
+[1;30m18:29:8.719ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro_small-webfont.woff.
+[1;30m18:29:8.723ms 5/10/2012 router.js:[0m 
+ /client/fonts/munro-webfont.woff has been requested.
+[1;30m18:29:8.723ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/munro-webfont.woff.
+[1;30m18:29:8.724ms 5/10/2012 router.js:[0m 
+ /client/fonts/joystix_monospace-webfont.woff has been requested.
+[1;30m18:29:8.724ms 5/10/2012 handle.js:[0m 
+ Serving /client/fonts/joystix_monospace-webfont.woff.
+[1;30m18:29:8.748ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:29:8.749ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:29:8.749ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:29:8.749ms 5/10/2012 load-content.js:[0m 
+ 5 "blog" content items requested...
+[1;30m18:29:8.749ms 5/10/2012 load-content.js:[0m 
+ 1 "who" content items requested...
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ 1 "what" content items requested...
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ 1 "social" content items requested...
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ 4 types of content have been requested.
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ ...10 "blog" content items total.
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ Grabbing 5 most recent "blog" content items...
+[1;30m18:29:8.750ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-10...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-9...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-8...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-7...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blog-6...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...1 "who" content items total.
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "who" content items...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: who-1...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...1 "what" content items total.
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "what" content items...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: what-1...
+[1;30m18:29:8.751ms 5/10/2012 load-content.js:[0m 
+ ...1 "social" content items total.
+[1;30m18:29:8.752ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "social" content items...
+[1;30m18:29:8.752ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: social-1...
+[1;30m18:29:8.754ms 5/10/2012 load-content.js:[0m 
+ ...blog-10.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...blog-9.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...blog-8.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...blog-7.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...blog-6.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...All "blog" content items have been grabbed.
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...who-1.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...All "who" content items have been grabbed.
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...what-1.json grabbed...
+[1;30m18:29:8.755ms 5/10/2012 load-content.js:[0m 
+ ...All "what" content items have been grabbed.
+[1;30m18:29:8.756ms 5/10/2012 load-content.js:[0m 
+ ...social-1.json grabbed...
+[1;30m18:29:8.756ms 5/10/2012 load-content.js:[0m 
+ ...All "social" content items have been grabbed.
+[1;30m18:29:8.756ms 5/10/2012 load-content.js:[0m 
+ All 4 content types have been grabbed!
+[1;30m18:29:8.758ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:29:8.972ms 5/10/2012 router.js:[0m 
+ /client/images/favicon.ico has been requested.
+[1;30m18:29:8.972ms 5/10/2012 handle.js:[0m 
+ Serving /client/images/favicon.ico.
+[1;30m18:29:13.316ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:29:13.317ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:29:13.617ms 5/10/2012 router.js:[0m 
+ /client/css/nooline.org.css has been requested.
+[1;30m18:29:13.618ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/nooline.org.css.
+[1;30m18:29:13.618ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:29:13.618ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:29:13.618ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:29:13.618ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:29:13.618ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:29:13.618ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:29:13.850ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:29:13.850ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:29:13.850ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 1 "blurb" content items requested...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 1 "notes" content items requested...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 1 "news" content items requested...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 1 "about" content items requested...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 1 "docs" content items requested...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ 5 types of content have been requested.
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ ...1 "blurb" content items total.
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "blurb" content items...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blurb-1...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ ...1 "notes" content items total.
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "notes" content items...
+[1;30m18:29:13.851ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: notes-1...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...2 "news" content items total.
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "news" content items...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: news-2...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...1 "about" content items total.
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "about" content items...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: about-1...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...1 "docs" content items total.
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "docs" content items...
+[1;30m18:29:13.852ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: docs-1...
+[1;30m18:29:13.854ms 5/10/2012 load-content.js:[0m 
+ ...blurb-1.json grabbed...
+[1;30m18:29:13.854ms 5/10/2012 load-content.js:[0m 
+ ...All "blurb" content items have been grabbed.
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...notes-1.json grabbed...
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...All "notes" content items have been grabbed.
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...news-2.json grabbed...
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...All "news" content items have been grabbed.
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...about-1.json grabbed...
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...All "about" content items have been grabbed.
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...docs-1.json grabbed...
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ ...All "docs" content items have been grabbed.
+[1;30m18:29:13.855ms 5/10/2012 load-content.js:[0m 
+ All 5 content types have been grabbed!
+[1;30m18:29:13.856ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:29:14.866ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:29:14.866ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:29:15.286ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:29:15.286ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:29:15.287ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:29:15.287ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:29:15.288ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:29:15.288ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:29:15.288ms 5/10/2012 router.js:[0m 
+ /client/css/nooline.org.css has been requested.
+[1;30m18:29:15.288ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/nooline.org.css.
+[1;30m18:29:15.531ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:29:15.531ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:29:15.531ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:29:15.531ms 5/10/2012 load-content.js:[0m 
+ 1 "blurb" content items requested...
+[1;30m18:29:15.531ms 5/10/2012 load-content.js:[0m 
+ 1 "notes" content items requested...
+[1;30m18:29:15.531ms 5/10/2012 load-content.js:[0m 
+ 1 "news" content items requested...
+[1;30m18:29:15.531ms 5/10/2012 load-content.js:[0m 
+ 1 "about" content items requested...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ 1 "docs" content items requested...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ 5 types of content have been requested.
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...1 "blurb" content items total.
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "blurb" content items...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blurb-1...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...1 "notes" content items total.
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "notes" content items...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: notes-1...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...2 "news" content items total.
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "news" content items...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: news-2...
+[1;30m18:29:15.532ms 5/10/2012 load-content.js:[0m 
+ ...1 "docs" content items total.
+[1;30m18:29:15.533ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "docs" content items...
+[1;30m18:29:15.533ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: docs-1...
+[1;30m18:29:15.533ms 5/10/2012 load-content.js:[0m 
+ ...1 "about" content items total.
+[1;30m18:29:15.533ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "about" content items...
+[1;30m18:29:15.533ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: about-1...
+[1;30m18:29:15.534ms 5/10/2012 load-content.js:[0m 
+ ...blurb-1.json grabbed...
+[1;30m18:29:15.534ms 5/10/2012 load-content.js:[0m 
+ ...All "blurb" content items have been grabbed.
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...notes-1.json grabbed...
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...All "notes" content items have been grabbed.
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...news-2.json grabbed...
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...All "news" content items have been grabbed.
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...docs-1.json grabbed...
+[1;30m18:29:15.535ms 5/10/2012 load-content.js:[0m 
+ ...All "docs" content items have been grabbed.
+[1;30m18:29:15.536ms 5/10/2012 load-content.js:[0m 
+ ...about-1.json grabbed...
+[1;30m18:29:15.536ms 5/10/2012 load-content.js:[0m 
+ ...All "about" content items have been grabbed.
+[1;30m18:29:15.536ms 5/10/2012 load-content.js:[0m 
+ All 5 content types have been grabbed!
+[1;30m18:29:15.536ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:29:37.788ms 5/10/2012 router.js:[0m 
+ / has been requested.
+[1;30m18:29:37.788ms 5/10/2012 handle.js:[0m 
+ Serving ./client/templates/nooline.org.html.
+[1;30m18:29:38.126ms 5/10/2012 router.js:[0m 
+ /client/css/nooline.org.css has been requested.
+[1;30m18:29:38.126ms 5/10/2012 handle.js:[0m 
+ Serving /client/css/nooline.org.css.
+[1;30m18:29:38.127ms 5/10/2012 router.js:[0m 
+ /client/js/lib/modernizr-1.7.min.js has been requested.
+[1;30m18:29:38.127ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/lib/modernizr-1.7.min.js.
+[1;30m18:29:38.129ms 5/10/2012 router.js:[0m 
+ /shared/js/lib/sjcl.js has been requested.
+[1;30m18:29:38.129ms 5/10/2012 handle.js:[0m 
+ Serving /shared/js/lib/sjcl.js.
+[1;30m18:29:38.132ms 5/10/2012 router.js:[0m 
+ /client/js/nooline.cat.js has been requested.
+[1;30m18:29:38.132ms 5/10/2012 handle.js:[0m 
+ Serving /client/js/nooline.cat.js.
+[1;30m18:29:38.242ms 5/10/2012 router.js:[0m 
+ /get-content has been requested.
+[1;30m18:29:38.243ms 5/10/2012 handle.js:[0m 
+ Handling request for /get-content.
+[1;30m18:29:38.243ms 5/10/2012 handle.js:[0m 
+ POST received.  Attempting to load data.
+[1;30m18:29:38.243ms 5/10/2012 load-content.js:[0m 
+ 1 "blurb" content items requested...
+[1;30m18:29:38.243ms 5/10/2012 load-content.js:[0m 
+ 1 "notes" content items requested...
+[1;30m18:29:38.243ms 5/10/2012 load-content.js:[0m 
+ 1 "news" content items requested...
+[1;30m18:29:38.243ms 5/10/2012 load-content.js:[0m 
+ 1 "about" content items requested...
+[1;30m18:29:38.243ms 5/10/2012 load-content.js:[0m 
+ 1 "docs" content items requested...
+[1;30m18:29:38.244ms 5/10/2012 load-content.js:[0m 
+ 5 types of content have been requested.
+[1;30m18:29:38.244ms 5/10/2012 load-content.js:[0m 
+ ...1 "notes" content items total.
+[1;30m18:29:38.244ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "notes" content items...
+[1;30m18:29:38.244ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: notes-1...
+[1;30m18:29:38.245ms 5/10/2012 load-content.js:[0m 
+ ...1 "about" content items total.
+[1;30m18:29:38.245ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "about" content items...
+[1;30m18:29:38.245ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: about-1...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...1 "docs" content items total.
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "docs" content items...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: docs-1...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...2 "news" content items total.
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "news" content items...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: news-2...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...1 "blurb" content items total.
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ Grabbing 1 most recent "blurb" content items...
+[1;30m18:29:38.246ms 5/10/2012 load-content.js:[0m 
+ ...Grabbing content item: blurb-1...
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...notes-1.json grabbed...
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...All "notes" content items have been grabbed.
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...about-1.json grabbed...
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...All "about" content items have been grabbed.
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...docs-1.json grabbed...
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...All "docs" content items have been grabbed.
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...news-2.json grabbed...
+[1;30m18:29:38.249ms 5/10/2012 load-content.js:[0m 
+ ...All "news" content items have been grabbed.
+[1;30m18:29:38.250ms 5/10/2012 load-content.js:[0m 
+ ...blurb-1.json grabbed...
+[1;30m18:29:38.250ms 5/10/2012 load-content.js:[0m 
+ ...All "blurb" content items have been grabbed.
+[1;30m18:29:38.250ms 5/10/2012 load-content.js:[0m 
+ All 5 content types have been grabbed!
+[1;30m18:29:38.251ms 5/10/2012 load-content.js:[0m 
+ Data sent back to client.
+[1;30m18:29:38.424ms 5/10/2012 router.js:[0m 
+ /client/images/nooline.org.ico has been requested.
+[1;30m18:29:38.425ms 5/10/2012 handle.js:[0m 
+ Serving /client/images/nooline.org.ico.
