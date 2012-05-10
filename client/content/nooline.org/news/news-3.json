@@ -1,0 +1,9 @@
+{
+	"type": "news",
+	"name": "news-3",
+	"published": true,
+	"date": "4/20/2012 at 10:58:39",
+	"author": "skyler",
+	"title": "Version 0.1.7",
+	"body": "<p>Some under-the-hood changes on this one, culminating in HTML snapshots for headless browsers, along with tweaks for robustness so that those very same bots don't crash the server.</p>"
+}
