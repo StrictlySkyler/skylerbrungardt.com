@@ -30,11 +30,11 @@ if (process.argv.length > 2) {
 // Start the server.
 start(portPassed);
 
-fs.readdir('./client/seo', function(error, data) {
+fs.readdir('./client/sites', function(error, data) {
 	if (error) {
 		errlog(__filename, error);
 	} else {
-		
+
 		sites = data;
 		
 		for (i = 0, sites.length; i < sites.length; i++) {
@@ -44,9 +44,10 @@ fs.readdir('./client/seo', function(error, data) {
 			browser.visit('http://' +
 										sites[i], function(e, browser) {
 				
-				fs.writeFile('./client/cache/' +
-										 browser.window.location.host +
-										 '/index.html', browser.html(), function(error) {
+				fs.writeFile('./client/sites/' +
+					browser.window.location.host +
+					'/snapshots/' +
+					'index.html', browser.html(), function(error) {
 					
 					if (error) {
 						

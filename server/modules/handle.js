@@ -72,9 +72,10 @@ handle["/"] = function(request, response) {
 				
 				debug(__filename, 'No response header, must be a bot!  Sending ' +
 							'cached page.');
-				fs.readFile('./client/cache/' +
-										request.headers.host +
-										'/index.html', 'utf8', function(error, content) {
+				fs.readFile('./client/sites/' +
+					request.headers.host +
+					'/snapshots/' +
+					'index.html', 'utf8', function(error, content) {
 					
 					if (error) {
 						errlog(__filename, error);
@@ -163,9 +164,10 @@ handle["/robots.txt"] = function(request, response) {
 
 handle["/index.html"] = function(request, response) {
 	
-	fs.readFile('./client/cache/' +
-							request.headers.host +
-							'/index.html', function(error, content) {
+	fs.readFile('./client/sites/' +
+		request.headers.host +
+		'/snapshots/' +
+		'index.html', function(error, content) {
 		if (error) {
 			
 			errlog(__filename, error);

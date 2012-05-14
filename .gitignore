@@ -6,3 +6,10 @@ autolint.js
 
 # OS Specific
 .DS_Store*
+
+# Other node modules
+node_modules
+
+# User credentials
+# Make sure that the default "admin.hash" gets reset, and remains part of the repo
+*.hash
