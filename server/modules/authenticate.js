@@ -35,8 +35,11 @@ exports.auth = function(request, response) {
 		
 		debug(__filename, 'User credentials received, searching for match...');
 		
-		creds = JSON.parse(postData, null, '\t');
-		
+    try {
+		  creds = JSON.parse(postData, null, '\t');
+    } catch (e) {
+      errlog(__filename, e);
+    }
 		fs.readFile('./shared/creds/' +
 							creds.username +
 							'.hash', 'utf8', function(error, data) {
@@ -55,8 +58,11 @@ exports.auth = function(request, response) {
 			
 		} else {
 			
-			store = JSON.parse(data, null, '\t');
-			
+      try {
+  			store = JSON.parse(data, null, '\t');
+      } catch (e) {
+        errlog(__filename, e);
+      }
 			debug(__filename, '...Found a match for \"' + store.username + '\", ' +
 						'checking password...');
 			
