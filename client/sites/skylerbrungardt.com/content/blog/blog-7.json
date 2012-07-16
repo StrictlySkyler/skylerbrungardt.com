@@ -1,0 +1,9 @@
+{
+	"type": "blog",
+	"name": "blog-7",
+	"published": true,
+	"date": "2/2/2012 at 2:6:7",
+	"author": "skyler",
+	"title": "And it's public.",
+	"body": "<p>Now officially hosted up on the <a href=\"http://search.npmjs.org/\" target=\"_blank\">NPM registry</a>, folks.</p>\n\n<p>Win.</p>\n\n<p>;-)</p>"
+}

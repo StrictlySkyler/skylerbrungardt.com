@@ -40,7 +40,8 @@ exports.auth = function(request, response) {
     } catch (e) {
       errlog(__filename, e);
     }
-		fs.readFile('./shared/creds/' +
+
+		fs.readFile('./server/creds/' +
 							creds.username +
 							'.hash', 'utf8', function(error, data) {
 		
@@ -99,7 +100,7 @@ exports.check = function(creds, callback) {
 	
 	var store;
 	
-	fs.readFile('./shared/creds/' +
+	fs.readFile('./server/creds/' +
 							creds.username +
 							'.hash', 'utf8', function(error, data) {
 		
