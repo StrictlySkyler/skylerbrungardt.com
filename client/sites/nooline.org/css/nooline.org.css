@@ -260,8 +260,11 @@ Author: Skyler Brungardt
 */
 @font-face {
   font-family: "FontAwesome";
-  src: url('../font/fontawesome-webfont.eot');
-  src: url('../font/fontawesome-webfont.eot?#iefix') format('eot'), url('../font/fontawesome-webfont.woff') format('woff'), url('../font/fontawesome-webfont.ttf') format('truetype'), url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('eot'),
+		url('../fonts/fontawesome-webfont.woff') format('woff'),
+		url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+		url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1197,7 +1200,6 @@ nav li a:focus:after {
 
 .post-form textarea {
 	resize: none;
-	height: 200px;
 	outline: none;
 	color: #333;
 	font: normal 18px/24px 'Palatino', 'Palatino Linotype', 'serif';
@@ -1577,7 +1579,7 @@ nav li a:focus:after {
 	z-index: 99998;
 	width: 40px;
 	left: -40px;
-	border-right: 5px solid #000;
+	border-right: 5px solid #666;
 }
 
 .wysiwyg-toolbar .button {
@@ -1595,6 +1597,7 @@ nav li a:focus:after {
 	width: 35px;
 	height: 30px;
 	margin: 0;
+	box-shadow: -1px 2px 5px #666;
 }
 
 .wysiwyg-toolbar .button:first-child {

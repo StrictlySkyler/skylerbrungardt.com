@@ -1,4 +1,0 @@
-User-agent: *
-Sitemap: http://nooline.org/client/seo/nooline.org/sitemap.xml
-Allow: /index.html
-Disallow: /

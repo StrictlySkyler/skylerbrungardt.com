@@ -1,9 +1,0 @@
-{
-	"type": "blurb",
-	"name": "blurb-1",
-	"published": true,
-	"date": "2/2/2012 at 1:16:43",
-	"author": "skyler",
-	"title": "A New Way to Manage Content",
-	"body": "<p>Built on Node.js, HTML5, and CSS3, \\nooline focuses on ease of use, scalability, and easy maintenance.  The goal is to reduce the effort needed to run and manage a CMS.</p>"
-}
