@@ -31,7 +31,7 @@
 		form.style.opacity = 0;
 		form.style.position = 'absolute';
 		form.innerHTML ='<button class="button edit-controls animate-all ' +
-			'close-edit-post">&times;</button>' +
+			'close-edit-post">Cancel</button>' +
 			'<button class="button edit-controls animate-all update-edit-post">' +
 				'Update</button>' +
 			'<button class="button edit-controls animate-all edit-post-remove">' +
@@ -62,8 +62,10 @@
 		// Set the height of the form fields to the height of the current content.
 		//
 		// Need to change the font, also.
-		newTitle.style.height = currentTitle.offsetHeight + 'px';
-		newBody.style.height = currentBody.offsetHeight + 'px';
+		newTitle.style.height = currentTitle.clientHeight + 'px';
+		newTitle.style.margin = document.defaultView.getComputedStyle(currentTitle, null).getPropertyValue('margin');
+		newBody.style.height = currentBody.clientHeight + 'px';
+		newBody.style.width = currentBody.clientWidth + 'px';
 		
 		parent.className += ' editing';
 		
@@ -115,7 +117,7 @@
 			form.style.opacity = '';
 			form.style.position = '';
 			
-		}, 500);
+		}, 0);
 		
 		// Add the form to the article parent.
 		parent.appendChild(form);

@@ -33,19 +33,16 @@
 		newPost.innerHTML = '<form id="add-' + name +'-post-form"' +
 				'action="/post" method="POST" class="animate-all post-form">' +
 			'<button id="close-' + name + '-form"' +
-				'class="animate-all close-new-post new-post-controls" ' +
-				'title="Cancel New Post">&times;</button>' +
+				'class="button animate-all close-new-post new-post-controls" ' +
+				'title="Cancel New Post">Cancel</button>' +
 			'<button id="save-' + name + '-post"' +
-				'class="animate-all save-new-post new-post-controls" ' +
+				'class="button animate-all save-new-post new-post-controls" ' +
 				'title="Save Post">Save</button>' +
 			'<label for="' + name + '-post-title">Post Title:' + '</label>' +
 			'<input id="' + name + '-post-title" name="' + name + '-post-title" ' +
 				'class="animate-all userinput title" type="text" />' +
-			'<label for="' + name + '-post-body">Post Content:</label>' +
-      '<div id="' + parent.id + '-toolbar" class="toolbar">' +
-        '<button>bold</button>' +
-      '</div>' +
-			'<textarea id="' + name + '-post-body" class="animate-all ' +
+			'<label for="' + name + '-textarea">Post Content:</label>' +
+			'<textarea id="' + name + '-textarea" class="animate-all ' +
 				'body userinput"></textarea>' +
 			'</form>';
 			
@@ -106,7 +103,9 @@
 			// cleaned up some, to not need extraneous style accomodations like this.
 			window.setTimeout(function() {
 				newPost.style.opacity = 1;
-			}, 250);
-		}, 5);
+			}, 0);
+		}, 0);
+		
+		N.buildEditor(name);
 	};
 }(nooline));

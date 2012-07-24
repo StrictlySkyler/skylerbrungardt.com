@@ -13,7 +13,7 @@ update = function(postData, request, response) {
 	var content = JSON.parse(postData),
 	// Grab the file we're going to be modifying, based upon which site the client
 	// is viewing.
-		file = './client/' +
+		file = './client/sites/' +
 		request.headers.host +
 		'/content/' +
 		content.type +

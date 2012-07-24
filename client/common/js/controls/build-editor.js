@@ -3,6 +3,7 @@
     var textareaId = id + '-textarea'
     , textarea = document.getElementById(textareaId)
     , toolbar = document.createElement('div')
+    , styleSheet = document.styleSheets[0].href
     ;
     
     toolbar.style.display = 'none';
@@ -33,7 +34,9 @@
     +   'title="Create A Link"'
     +   'data-wysihtml5-command="createLink">'
     + '</button>'
-    + '<div data-wysihtml5-dialog="createLink" style="display: none;">'
+    + '<div data-wysihtml5-dialog="createLink"'
+    +   'class="create-link-dialog wysiwyg-popout"'
+    +   'style="display: none;">'
     +   '<label>'
     +     'Link:'
     +     '<input data-wysihtml5-dialog-field="href" value="http://">'
@@ -61,13 +64,15 @@
     +   'title="Insert an image"'
     +   'data-wysihtml5-command="insertImage">'
     + '</button>'
-    + '<div data-wysihtml5-dialog="insertImage" style="display: none;">'
+    + '<div data-wysihtml5-dialog="insertImage"'
+    +   'class="insert-image-dialog wysiwyg-popout"'
+    +   'style="display: none;">'
     +   '<label>'
     +     'Image:'
     +     '<input data-wysihtml5-dialog-field="src" value="http://">'
     +   '</label>'
     +   '<label>'
-    +     'Description of the image (alt-text):'
+    +     'Description (alt-text):'
     +     '<input data-wysihtml5-dialog-field="alt">'
     +   '</label>'
     +   '<button class="editor-control sub-control ok button"'
@@ -109,7 +114,7 @@
       parser: wysihtml5.dom.parse || Prototype.K,
       composerClassName: 'wysihtml5-editor',
       bodyClassName: 'wysihtml5-supported',
-      stylesheets: [],
+      stylesheets: [styleSheet],
       placeholderText: null,
       allowObjectResizing: true,
       supportTouchDevices: true

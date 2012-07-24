@@ -281,7 +281,7 @@ Author: Skyler Brungardt
 	background: rgba(0,0,0,0.5);
 }
 
-html {
+#html {
 	background: #fff;
 	box-shadow: inset 0 0 30px #333;
 	min-height: 100%;
@@ -548,10 +548,11 @@ h1 a:visited {
 	color: #000;
 }
 
-h2 {
+h2,
+#blurb .title {
 	color: #333;
 	font: normal 28px/28px 'Palatino', 'Palatino Linotype', 'serif';
-	width: 710px;
+	width: 100%;
 	text-shadow:
 		-1px 1px 0 #fff,
 		-3px 3px 0 #eef;
@@ -584,6 +585,10 @@ h3 a:hover {
 	padding: 0 0 0 10px;
 	margin: 0 0 10px;
 	text-indent: -10px;
+}
+
+#right-sidebar input.title {
+	font: normal 16px/16px 'Courier New';
 }
 
 h4 {
@@ -685,6 +690,7 @@ nav li a:focus:after {
 	border-bottom-left-radius: 8px;
 }
 
+.new-post .button,
 .removed .button,
 .editing .button {
 	border-radius: 12px;
@@ -764,6 +770,7 @@ nav li a:focus:after {
 	border-bottom: 1px solid #cef;
 	border-left: 1px solid #cef;
 	border-radius: 8px;
+	position: relative;
 }
 
 .article:hover {
@@ -801,13 +808,23 @@ nav li a:focus:after {
 	position: relative;
 }
 
-.blurb.text-body {
+.blurb.text-body,
+.blurb .post-form textarea {
 	font-size: 14px;
 }
 
 .text-body p {
 	margin: 0 0 10px 20px;
 	text-indent: -20px;
+}
+
+.userinput.body.wysihtml5-editor.wysiwyg {
+	background: none;
+	width: 100%;
+}
+
+.userinput.body.wysihtml5-editor.wysiwyg p {
+	margin: 0 0 10px;
 }
 
 #right-sidebar .text-body p {
@@ -975,7 +992,7 @@ nav li a:focus:after {
 	box-shadow: -1px 1px 1px #999;
 	font: normal 14px/14px 'Courier New';
 	color: #09f;
-	
+	outline: none;
 }
 
 #login-form input[type="submit"],
@@ -1002,18 +1019,24 @@ nav li a:focus:after {
 #container button:focus {
 	outline: none;
 	border: 1px solid #0f0;
+}
+
+#container button:focus {
 	color: #09f;
-	opacity: 1;
 }
 
 #login-form input:focus,
-#login-form textarea:focus,
 #login-form button:focus {
 	color: #f0c;
+	border: 1px solid #0f0;
 }
 
-#container input:hover,
-#container textarea:hover,
+#login-form input:hover,
+#login-form button:hover {
+	color: #f0c;
+	box-shadow: -1px 1px 1px #f0c;
+}
+
 #container button:hover,
 #container button:focus {
 	box-shadow: -1px 1px 1px #f0c;
@@ -1021,7 +1044,6 @@ nav li a:focus:after {
 	border: 1px solid #fff;
 }
 
-#container input:active,
 #container button:active {
 	background: #fc0;
 	color: #f00;
@@ -1084,7 +1106,7 @@ nav li a:focus:after {
 	top: 10px;
 	right: -40px;
 	border-bottom: 1px solid #fff;
-	border-left: 0;
+	border-left-color: #999;
 }
 
 .edit-post {
@@ -1096,7 +1118,7 @@ nav li a:focus:after {
 	background: #5af;
 	font: normal 14px/14px 'Courier New';
 	color: #fff;
-	top: 0;
+	top: -1px;
 	right: 10px;
 	box-shadow: inset -1px 1px 1px #666;
 	padding: 0;
@@ -1110,10 +1132,11 @@ nav li a:focus:after {
 	border-left: 0;
 }
 
-.editing {
+#container .editing {
 	background: #cef;
 	box-shadow: -1px 1px 1px #999;
 	margin: 0 0 10px;
+	border: 1px dashed #000;
 }
 
 .removed {
@@ -1205,6 +1228,13 @@ nav li a:focus:after {
 	font: normal 18px/24px 'Palatino', 'Palatino Linotype', 'serif';
 }
 
+#right-sidebar .post-form textarea,
+#right-sidebar .userinput.body.wysihtml5-editor.wysiwyg p {
+	font: normal 13px/18px 'Palatino', 'Palatino Linotype', 'serif';
+	text-indent: 0;
+	margin: 0 0 10px;
+}
+
 .new-post-controls,
 .edit-controls {
 	position: absolute;
@@ -1212,16 +1242,21 @@ nav li a:focus:after {
 	width: 60px;
 	background: #5af;
 	border: 1px solid #fff;
-	border-left: none;
-	box-shadow: inset -1px 1px 1px #999;
-	font: normal 24px/28px 'Courier New';
+	border-left-color: #27c;
+	border-bottom: none;
+	box-shadow: inset -1px 1px 1px #666;
+	font: bold 14px/14px 'Courier New';
 	color: #fff;
+}
+
+.edit-controls:last-child {
+	border-bottom: 1px solid #fff;
 }
 
 .close-new-post,
 .close-edit-post {
 	height: 25px;
-	font-size: 22px;
+	top: 8px;
 }
 
 #container .close-new-post:hover,
@@ -1231,16 +1266,16 @@ nav li a:focus:after {
 	background: #f00;
 	color: #fc0;
 	border-color: #f90;
+	z-index: 99998;
 }
 
 .edit-post-remove {
 	height: 25px;
-	top: 60px;
-	font: bold 14px/14px 'Courier New';
+	top: 57px;
 }
 
-.edit-post-remove:hover,
-.edit-post-remove:focus {
+#container .edit-post-remove:hover,
+#container .edit-post-remove:focus {
 	color: #f60;
 	background: #404040;
 	border-color: #f60;
@@ -1249,27 +1284,18 @@ nav li a:focus:after {
 .save-new-post,
 .update-edit-post {
 	height: 25px;
-	top: 30px;
+	top: 32px;
 	border-radius: 16px;
 }
 
-#right-sidebar .save-new-post,
-#right-sidebar .update-edit-post {
-	margin: 30px 0 0 145px;
-}
-
-.save-new-post,
-.update-edit-post {
-	font: bold 14px/14px 'Courier New';
-}
-
-.save-new-post:hover,
-.save-new-post:focus,
-.update-edit-post:hover,
-.update-edit-post:focus {
+#container .save-new-post:hover,
+#container .save-new-post:focus,
+#container .update-edit-post:hover,
+#container .update-edit-post:focus {
 	background: #06f;
 	color: #fff;
 	border-color: #0cf;
+	z-index: 99998;
 }
 
 .close-new-post:active,
@@ -1574,12 +1600,20 @@ nav li a:focus:after {
 */
 .wysiwyg-toolbar {
 	position: absolute;
+	width: 50px;
+	left: -60px;
+	border-right: 10px solid #0af;
 	border-radius: 8px;
-	border-top-right-radius: 0;
 	z-index: 99998;
-	width: 40px;
-	left: -40px;
-	border-right: 5px solid #666;
+}
+
+.wysiwyg-toolbar:after {
+	content: '';
+	border: 15px solid transparent;
+	border-left: 10px solid #0af;
+	position: absolute;
+	right: -35px;
+	top: 8px;
 }
 
 .wysiwyg-toolbar .button {
@@ -1600,12 +1634,18 @@ nav li a:focus:after {
 	box-shadow: -1px 2px 5px #666;
 }
 
+#right-sidebar .wysiwyg-toolbar .button {
+	border-radius: 0;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
 .wysiwyg-toolbar .button:first-child {
-	border-top: 0;
+	border-top-color: #fff;
 }
 
 .wysiwyg-toolbar .button:last-child {
-	border-bottom: 0;
+	border-bottom: 1px solid #fff;
 }
 
 #container .wysiwyg-toolbar .button:hover {
@@ -1641,6 +1681,65 @@ nav li a:focus:after {
 	color: #000;
 	float: left;
 	margin: 2px 0 0;
+}
+
+.wysiwyg-popout {
+	float: right;
+	background: #0af;
+	padding: 10px 0 10px 10px;
+	border: 1px dashed #000;
+	border-right: none;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	box-shadow: -1px 1px 1px #f0c;
+	width: 200px;
+}
+
+.wysiwyg-popout label {
+	color: #fff;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.wysiwyg-popout input {
+	margin: 10px 0 0;
+	width: 100%;
+	font-size: 14px;
+	outline: none;
+	box-shadow: -1px 1px 1px #000;
+	border: 1px solid #999;
+	height: 25px;
+}
+
+.wysiwyg-popout input:focus {
+	border-color: #0f0;
+}
+
+.wysiwyg-popout input:hover {
+	border-color: #f0c;
+}
+
+.wysiwyg-popout .button {
+	border-radius: 12px;
+	border: 1px solid #fff;
+	box-shadow: inset -1px 1px 1px #000;
+	background: #0af;
+	width: 45%;
+	clear: none;
+}
+
+#container .wysiwyg-popout .button:hover {
+	width: 45%;
+	border: 1px solid #f0c;
+	box-shadow: -1px 1px 1px #000;
+}
+
+.wysiwyg-popout .ok {
+	float: left;
+}
+
+.wysiwyg-popout .cancel {
+	float: right;
 }
 
 .bold-toggle:before {

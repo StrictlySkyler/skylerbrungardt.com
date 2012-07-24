@@ -368,6 +368,131 @@ document.onreadystatechange = function() {
 	
 }(nooline));
 
+(function(N) {
+  N.buildEditor = function(id) {
+    var textareaId = id + '-textarea'
+    , textarea = document.getElementById(textareaId)
+    , toolbar = document.createElement('div')
+    , styleSheet = document.styleSheets[0].href
+    ;
+    
+    toolbar.style.display = 'none';
+    toolbar.id = id + '-toolbar';
+    toolbar.className = 'wysiwyg-toolbar';
+    toolbar.innerHTML =
+      '<button class="editor-control bold-toggle button"'
+    +   'title="Bold Text (control+b)"'
+    +   'data-wysihtml5-command="bold">'
+    + '</button>'
+    + '<button class="editor-control italic-toggle button"'
+    +   'title="Italicize Text (ctrl+i)"'
+    +   'data-wysihtml5-command="italic">'
+    + '</button>'
+    + '<button class="editor-control underline-toggle button"'
+    +   'title="Underline Text (ctrl+u)"'
+    +   'data-wysihtml5-command="underline">'
+    + '</button>'
+    + '<button class="editor-control bullet-toggle button"'
+    +   'title="Insert Bullets"'
+    +   'data-wysihtml5-command="insertUnorderedList">'
+    + '</button>'
+    + '<button class="editor-control list-toggle button"'
+    +   'title="Insert List"'
+    +   'data-wysihtml5-command="insertOrderedList">'
+    + '</button>'
+    + '<button class="editor-control link-toggle button"'
+    +   'title="Create A Link"'
+    +   'data-wysihtml5-command="createLink">'
+    + '</button>'
+    + '<div data-wysihtml5-dialog="createLink"'
+    +   'class="create-link-dialog wysiwyg-popout"'
+    +   'style="display: none;">'
+    +   '<label>'
+    +     'Link:'
+    +     '<input data-wysihtml5-dialog-field="href" value="http://">'
+    +   '</label>'
+    +   '<button class="editor-control sub-control ok button"'
+    +     'data-wysihtml5-dialog-action="save">'
+    +     'OK'
+    +   '</button>'
+    +   '<button class="editor-control sub-control cancel button"'
+    +     'data-wysihtml5-dialog-action="cancel">'
+    +     'Cancel'
+    +   '</button>'
+    + '</div>'
+    + '<button class="editor-control small-text-toggle button"'
+    +   'title="Make Text Small"'
+    +   'data-wysihtml5-command="fontSize"'
+    +   'data-wysihtml5-command-value="small">'
+    + '</button>'
+    + '<button class="editor-control large-text-toggle button"'
+    +   'title="Make Text Large"'
+    +   'data-wysihtml5-command="fontSize"'
+    +   'data-wysihtml5-command-value="large">'
+    + '</button>'
+    + '<button class="editor-control insert-image-toggle button"'
+    +   'title="Insert an image"'
+    +   'data-wysihtml5-command="insertImage">'
+    + '</button>'
+    + '<div data-wysihtml5-dialog="insertImage"'
+    +   'class="insert-image-dialog wysiwyg-popout"'
+    +   'style="display: none;">'
+    +   '<label>'
+    +     'Image:'
+    +     '<input data-wysihtml5-dialog-field="src" value="http://">'
+    +   '</label>'
+    +   '<label>'
+    +     'Description (alt-text):'
+    +     '<input data-wysihtml5-dialog-field="alt">'
+    +   '</label>'
+    +   '<button class="editor-control sub-control ok button"'
+    +     'title="Insert this image"'
+    +     'data-wysihtml5-dialog-action="save">'
+    +     'OK'
+    +   '</button>'
+    +   '<button class="editor-control sub-control cancel button"'
+    +     'title="Cancel inserting an image"'
+    +     'data-wysihtml5-dialog-action="cancel">'
+    +     'Cancel'
+    +   '</button>'
+    + '</div>'
+    + '<button class="editor-control justify-center-toggle button"'
+    +   'title="Align Text to the Center"'
+    +   'data-wysihtml5-command="justifyCenter">'
+    + '</button>'
+    + '<button class="editor-control justify-left-toggle button"'
+    +   'title="Align Text to the Left"'
+    +   'data-wysihtml5-command="justifyLeft">'
+    + '</button>'
+    + '<button class="editor-control justify-right-toggle button"'
+    +   'title="Align Text to the Right"'
+    +   'data-wysihtml5-command="justifyRight">'
+    + '</button>'
+    + '<button class="editor-control show-html-toggle button"'
+    +   'title="Show Raw HTML"'
+    +   'data-wysihtml5-action="change_view">'
+    + '</button>'
+    ;
+    textarea.parentNode.insertBefore(toolbar, textarea);
+    
+    var editor = new wysihtml5.Editor(textareaId, {
+      name: 'wysiwyg',
+      style: true,
+      toolbar: id + '-toolbar',
+      autoLink: true,
+      parserRules: wysihtml5ParserRules,
+      parser: wysihtml5.dom.parse || Prototype.K,
+      composerClassName: 'wysihtml5-editor',
+      bodyClassName: 'wysihtml5-supported',
+      stylesheets: [styleSheet],
+      placeholderText: null,
+      allowObjectResizing: true,
+      supportTouchDevices: true
+    });
+    
+  };
+}(nooline));
+
 // Add a new user to the system.
 
 (function(N) {
@@ -1071,19 +1196,16 @@ document.onreadystatechange = function() {
 		newPost.innerHTML = '<form id="add-' + name +'-post-form"' +
 				'action="/post" method="POST" class="animate-all post-form">' +
 			'<button id="close-' + name + '-form"' +
-				'class="animate-all close-new-post new-post-controls" ' +
-				'title="Cancel New Post">&times;</button>' +
+				'class="button animate-all close-new-post new-post-controls" ' +
+				'title="Cancel New Post">Cancel</button>' +
 			'<button id="save-' + name + '-post"' +
-				'class="animate-all save-new-post new-post-controls" ' +
+				'class="button animate-all save-new-post new-post-controls" ' +
 				'title="Save Post">Save</button>' +
 			'<label for="' + name + '-post-title">Post Title:' + '</label>' +
 			'<input id="' + name + '-post-title" name="' + name + '-post-title" ' +
 				'class="animate-all userinput title" type="text" />' +
-			'<label for="' + name + '-post-body">Post Content:</label>' +
-      '<div id="' + parent.id + '-toolbar" class="toolbar">' +
-        '<button>bold</button>' +
-      '</div>' +
-			'<textarea id="' + name + '-post-body" class="animate-all ' +
+			'<label for="' + name + '-textarea">Post Content:</label>' +
+			'<textarea id="' + name + '-textarea" class="animate-all ' +
 				'body userinput"></textarea>' +
 			'</form>';
 			
@@ -1144,8 +1266,10 @@ document.onreadystatechange = function() {
 			// cleaned up some, to not need extraneous style accomodations like this.
 			window.setTimeout(function() {
 				newPost.style.opacity = 1;
-			}, 250);
-		}, 5);
+			}, 0);
+		}, 0);
+		
+		N.buildEditor(name);
 	};
 }(nooline));
 
@@ -1182,7 +1306,7 @@ document.onreadystatechange = function() {
 		form.style.opacity = 0;
 		form.style.position = 'absolute';
 		form.innerHTML ='<button class="button edit-controls animate-all ' +
-			'close-edit-post">&times;</button>' +
+			'close-edit-post">Cancel</button>' +
 			'<button class="button edit-controls animate-all update-edit-post">' +
 				'Update</button>' +
 			'<button class="button edit-controls animate-all edit-post-remove">' +
@@ -1213,8 +1337,10 @@ document.onreadystatechange = function() {
 		// Set the height of the form fields to the height of the current content.
 		//
 		// Need to change the font, also.
-		newTitle.style.height = currentTitle.offsetHeight + 'px';
-		newBody.style.height = currentBody.offsetHeight + 'px';
+		newTitle.style.height = currentTitle.clientHeight + 'px';
+		newTitle.style.margin = document.defaultView.getComputedStyle(currentTitle, null).getPropertyValue('margin');
+		newBody.style.height = currentBody.clientHeight + 'px';
+		newBody.style.width = currentBody.clientWidth + 'px';
 		
 		parent.className += ' editing';
 		
@@ -1266,7 +1392,7 @@ document.onreadystatechange = function() {
 			form.style.opacity = '';
 			form.style.position = '';
 			
-		}, 500);
+		}, 0);
 		
 		// Add the form to the article parent.
 		parent.appendChild(form);
@@ -1274,126 +1400,6 @@ document.onreadystatechange = function() {
     N.buildEditor(parent.id);
 	};
 	
-}(nooline));
-
-(function(N) {
-  N.buildEditor = function(id) {
-    var textareaId = id + '-textarea'
-    , textarea = document.getElementById(textareaId)
-    , toolbar = document.createElement('div')
-    ;
-    
-    toolbar.style.display = 'none';
-    toolbar.id = id + '-toolbar';
-    toolbar.className = 'wysiwyg-toolbar';
-    toolbar.innerHTML =
-      '<button class="editor-control bold-toggle button"'
-    +   'title="Bold Text (control+b)"'
-    +   'data-wysihtml5-command="bold">'
-    + '</button>'
-    + '<button class="editor-control italic-toggle button"'
-    +   'title="Italicize Text (ctrl+i)"'
-    +   'data-wysihtml5-command="italic">'
-    + '</button>'
-    + '<button class="editor-control underline-toggle button"'
-    +   'title="Underline Text (ctrl+u)"'
-    +   'data-wysihtml5-command="underline">'
-    + '</button>'
-    + '<button class="editor-control bullet-toggle button"'
-    +   'title="Insert Bullets"'
-    +   'data-wysihtml5-command="insertUnorderedList">'
-    + '</button>'
-    + '<button class="editor-control list-toggle button"'
-    +   'title="Insert List"'
-    +   'data-wysihtml5-command="insertOrderedList">'
-    + '</button>'
-    + '<button class="editor-control link-toggle button"'
-    +   'title="Create A Link"'
-    +   'data-wysihtml5-command="createLink">'
-    + '</button>'
-    + '<div data-wysihtml5-dialog="createLink" style="display: none;">'
-    +   '<label>'
-    +     'Link:'
-    +     '<input data-wysihtml5-dialog-field="href" value="http://">'
-    +   '</label>'
-    +   '<button class="editor-control sub-control ok button"'
-    +     'data-wysihtml5-dialog-action="save">'
-    +     'OK'
-    +   '</button>'
-    +   '<button class="editor-control sub-control cancel button"'
-    +     'data-wysihtml5-dialog-action="cancel">'
-    +     'Cancel'
-    +   '</button>'
-    + '</div>'
-    + '<button class="editor-control small-text-toggle button"'
-    +   'title="Make Text Small"'
-    +   'data-wysihtml5-command="fontSize"'
-    +   'data-wysihtml5-command-value="small">'
-    + '</button>'
-    + '<button class="editor-control large-text-toggle button"'
-    +   'title="Make Text Large"'
-    +   'data-wysihtml5-command="fontSize"'
-    +   'data-wysihtml5-command-value="large">'
-    + '</button>'
-    + '<button class="editor-control insert-image-toggle button"'
-    +   'title="Insert an image"'
-    +   'data-wysihtml5-command="insertImage">'
-    + '</button>'
-    + '<div data-wysihtml5-dialog="insertImage" style="display: none;">'
-    +   '<label>'
-    +     'Image:'
-    +     '<input data-wysihtml5-dialog-field="src" value="http://">'
-    +   '</label>'
-    +   '<label>'
-    +     'Description of the image (alt-text):'
-    +     '<input data-wysihtml5-dialog-field="alt">'
-    +   '</label>'
-    +   '<button class="editor-control sub-control ok button"'
-    +     'title="Insert this image"'
-    +     'data-wysihtml5-dialog-action="save">'
-    +     'OK'
-    +   '</button>'
-    +   '<button class="editor-control sub-control cancel button"'
-    +     'title="Cancel inserting an image"'
-    +     'data-wysihtml5-dialog-action="cancel">'
-    +     'Cancel'
-    +   '</button>'
-    + '</div>'
-    + '<button class="editor-control justify-center-toggle button"'
-    +   'title="Align Text to the Center"'
-    +   'data-wysihtml5-command="justifyCenter">'
-    + '</button>'
-    + '<button class="editor-control justify-left-toggle button"'
-    +   'title="Align Text to the Left"'
-    +   'data-wysihtml5-command="justifyLeft">'
-    + '</button>'
-    + '<button class="editor-control justify-right-toggle button"'
-    +   'title="Align Text to the Right"'
-    +   'data-wysihtml5-command="justifyRight">'
-    + '</button>'
-    + '<button class="editor-control show-html-toggle button"'
-    +   'title="Show Raw HTML"'
-    +   'data-wysihtml5-action="change_view">'
-    + '</button>'
-    ;
-    textarea.parentNode.insertBefore(toolbar, textarea);
-    
-    var editor = new wysihtml5.Editor(textareaId, {
-      name: 'wysiwyg',
-      style: true,
-      toolbar: id + '-toolbar',
-      autoLink: true,
-      parserRules: wysihtml5ParserRules,
-      parser: wysihtml5.dom.parse || Prototype.K,
-      composerClassName: 'wysihtml5-editor',
-      bodyClassName: 'wysihtml5-supported',
-      stylesheets: [],
-      placeholderText: null,
-      allowObjectResizing: true,
-      supportTouchDevices: true
-    });
-    
-  };
 }(nooline));
 
 // Checks to see if there is an error in the input field previously. If there

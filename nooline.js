@@ -31,40 +31,51 @@ if (process.argv.length > 2) {
 start(portPassed);
 
 fs.readdir('./client/sites', function(error, data) {
+	var getSnapShots;
+	
+	i = 0;
+	
 	if (error) {
 		errlog(__filename, error);
 	} else {
 		
 		sites = data;
 		
-		for (i = 0, sites.length; i < sites.length; i++) {
-			
-			if (sites[i] !== 'localhost') {
-				var sitename = sites[i];
+		//for (i = 0, sites.length; i < sites.length; i++) {
+		getSnapShots = function() {
+			if (i < sites.length) {
 				
-				browser.visit('http://' +
-											sites[i], function(e, browser) {
+				if (sites[i] !== 'localhost') {
+					var sitename = sites[i];
 					
-					fs.writeFile('./client/sites/' +
-						browser.window.location.host +
-						'/snapshots/' +
-						'index.html', browser.html(), function(error) {
+					browser.visit('http://' +
+												sites[i], function(e, browser) {
 						
-						if (error) {
+						fs.writeFile('./client/sites/' +
+							browser.window.location.host +
+							'/snapshots/' +
+							'index.html', browser.html(), function(error) {
 							
-							errlog(__filename, error);
-							
-						} else {
-							
-							debug(__filename, 'HTML snapshot of ' +
-										browser.window.location.host +
-										' taken!');
-							
-						}
+							if (error) {
+								
+								errlog(__filename, error);
+								
+							} else {
+								
+								debug(__filename, 'HTML snapshot of ' +
+											browser.window.location.host +
+											' taken!');
+								
+								i = i + 1;
+								
+								getSnapShots();
+							}
+						});
 					});
-				});
+				}
+				
 			}
-		}
-		
+		};
+		getSnapShots();
 	}
 });
